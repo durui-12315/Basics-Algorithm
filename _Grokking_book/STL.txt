@@ -1,0 +1,38 @@
+序列适配器：
+vector:
+    1.vector基于数组
+    2.最适合元素的随机访问，即下标操作
+    3.不适合中间元素的频繁插入和删除
+
+list:
+    1.list基于双向链表
+    2.最适合用于任何地方元素的频繁插入和删除
+    3.list不适合做下标操作
+
+deque:
+    1.deque基于双端队列
+    2.对两端操作的效率类似于list
+    3.对下标操作具有接近vector的效率
+    4.中间的插入和删除和vector一样效率低
+    5.deque适用与两端频繁加入或删除的场景
+
+stack:
+    1.stack基于堆栈
+    2.只允许对栈顶进行访问、入栈、出栈操作
+
+queue:
+    1.queue基于单向链表
+    2.queue是通过deque实现的，模板头为template <class T, class C = deque<T>> class queue{}
+    3.和deque的特性相同
+
+priority_queue:
+    1.priority_queue基于堆（大根堆、小根堆）
+    2.为每个元素定义了优先级，来控制元素达到top的顺序
+
+========================================================
+
+关联容器：
+    1.set、multiset、map、multimap是基于红黑树实现的
+    2.unordered_map、unordered_set、hash_map是基于散列表实现的
+    3.multiset、multimap插入相同key时，将后插入的key放在相等key右边，无论插入或删除，后加入key会被认为比之前的大
+
